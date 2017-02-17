@@ -6,7 +6,6 @@ util = {
 		var aResult=[];
 		var re=new RegExp('\\b'+sClass+'\\b', 'i');
 		var i=0;
-		 
 		for(i=0;i<aEle.length;i++){
 		  
 			 if(re.test(aEle[i].className)){
@@ -40,5 +39,14 @@ util = {
 	    }else{
 	        e.returnValue=false;
 	    }
+	},
+	getUrlParam : function(name){
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) {
+            return  decodeURI(r[2]);
+        }else{
+            return null;
+        }
 	}
 };
