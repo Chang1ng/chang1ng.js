@@ -1,8 +1,3 @@
-
-
-//获取元素
-function getByClass(oParent, sClass){
-	 var aEle=oParent.getElementsByTagName('*');
 	 var aResult=[];
 	 var re=new RegExp('\\b'+sClass+'\\b', 'i');
 	 var i=0;
