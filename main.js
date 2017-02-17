@@ -15,12 +15,7 @@ util = {
 		}
 		return aResult;
 	},
-	//addevent
-	/*
-	*obj -element
-	*type-event type
-	*fn  -callback function
-	*/
+	//addEvent
 	addEvent : function (obj,type,fn){
 	    if(typeof obj.addEventListener !== 'undefined'){
 	        obj.addEventListener(type,fn,false);
@@ -29,6 +24,7 @@ util = {
 	        fn.call(obj,window.event);
 	    }
 	},
+	//removeEvent
 	removeEvent : function (obj,type,fn){
 	    if(typeof obj.removeEventListener!=='undefined'){
 	        obj.removeEventListener(type,fn,false);
@@ -38,11 +34,11 @@ util = {
 	},
 	//close default event
 	preDef : function (event){
-    var e = event;
-    if(typeof e.preventDefault !== 'undefined'){
-        e.preventDefault();
-    }else{
-        e.returnValue=false;
-    }
-}
+	    var e = event;
+	    if(typeof e.preventDefault !== 'undefined'){
+	        e.preventDefault();
+	    }else{
+	        e.returnValue=false;
+	    }
+	}
 };
