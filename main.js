@@ -40,6 +40,7 @@ util = {
 	        e.returnValue=false;
 	    }
 	},
+	//get url param
 	getUrlParam : function(name){
         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
@@ -48,5 +49,13 @@ util = {
         }else{
             return null;
         }
+	},
+	//deep copy object 
+	deepCopy : function(source) { 
+		var result={};
+		for (var key in source) {
+		      result[key] = typeof source[key]===’object’? deepCoyp(source[key]): source[key];
+		} 
+		return result; 
 	}
 };
