@@ -60,7 +60,7 @@
 		container.addEventListener("touchstart",function(event){
 
 			defaults.ox = event.targetTouches[0].pageX;  
-            defaults.oy = event.targetTouches[0].pageY;
+           		defaults.oy = event.targetTouches[0].pageY;
 			
 			if(x <= 0){
 				x = 0;
@@ -80,16 +80,16 @@
 		container.addEventListener("touchmove",function(event){
 			event.preventDefault();
 			defaults.nx = event.targetTouches[0].pageX;  
-            defaults.ny = event.targetTouches[0].pageY;
+           		defaults.ny = event.targetTouches[0].pageY;
 
 			var changeY = defaults.oy - defaults.ny;  
-            var changeX = defaults.ox - defaults.nx; 
+            		var changeX = defaults.ox - defaults.nx; 
 
 			if(changeX>0){
-            	containerIn.css('transform','translate3d('+ (-changeX) +'px,0,0)');
-            }else{
-            	containerIn.css('transform','translate3d('+ (-changeX) +'px,0,0)');
-            }
+			    containerIn.css('transform','translate3d('+ (-changeX) +'px,0,0)');
+			}else{
+			    containerIn.css('transform','translate3d('+ (-changeX) +'px,0,0)');
+			}
 		
 		}); 
 
