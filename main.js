@@ -57,5 +57,16 @@ util = {
 		      result[key] = typeof source[key]===’object’? deepCoyp(source[key]): source[key];
 		} 
 		return result; 
+	},
+	//array de emphasis
+	Array.prototype.unique2 = function(){
+		this.sort();
+	 	var res = [this[0]];
+		for(var i = 1; i < this.length; i++){
+		    if(this[i] !== res[res.length - 1]){
+		       res.push(this[i]);
+		    }
+		}
+		return res;
 	}
 };
