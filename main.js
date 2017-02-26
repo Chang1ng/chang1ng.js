@@ -143,7 +143,14 @@ util = {
 	    s = s.replace(/;\s*;/g, ";");
 	    s = s.match(/^\s*(\S+(\s+\S+)*)\s*$/);
 	    return (s == null) ? "" : s[1];
+	},
+	isArray : function(o) {
+	    return toString.apply(o) === '[object Array]';
 	}
+	isObject : function(o) {
+	    return toString.apply(o) === '[object Object]';
+	}
+
 	
 
 };
