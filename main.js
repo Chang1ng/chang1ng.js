@@ -136,7 +136,7 @@ util = {
 	    return format;
 	    // alert(new Date().format("yyyy-MM-dd hh:mm:ss"));
 	},
-	compressCss function (s) {
+	compressCss : function (s) {
 	    s = s.replace(/\/\*(.|\n)*?\*\//g, "");
 	    s = s.replace(/\s*([\{\}\:\;\,])\s*/g, "$1");
 	    s = s.replace(/\,[\s\.\#\d]*\{/g, "{");
