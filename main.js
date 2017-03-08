@@ -136,7 +136,7 @@ util = {
 	    return format;
 	    // alert(new Date().format("yyyy-MM-dd hh:mm:ss"));
 	},
-	compressCss (s) {
+	compressCss function (s) {
 	    s = s.replace(/\/\*(.|\n)*?\*\//g, "");
 	    s = s.replace(/\s*([\{\}\:\;\,])\s*/g, "$1");
 	    s = s.replace(/\,[\s\.\#\d]*\{/g, "{");
@@ -146,20 +146,20 @@ util = {
 	},
 	isArray : function(o) {
 	    return toString.apply(o) === '[object Array]';
-	}
+	},
 	isObject : function(o) {
 	    return toString.apply(o) === '[object Object]';
 	},
 	setOpacity : function (obj, val) {  
-        var vals = (typeof obj === "number" && val <= 100 && val >= 0) ? val : 100;  
-        if (!obj) {  
-            return;  
-        }  
-        if (ie) {  
-            obj.style.filter = 'alpha(opacity=' + vals + ')';  
-        } else {  
-            obj.style.opacity = vals / 100;  
-        }  
-    }
+		var vals = (typeof obj === "number" && val <= 100 && val >= 0) ? val : 100;  
+		if (!obj) {  
+		    return;  
+		}  
+		if (ie) {  
+		    obj.style.filter = 'alpha(opacity=' + vals + ')';  
+		} else {  
+		    obj.style.opacity = vals / 100;  
+		}  
+	}
 
 };
