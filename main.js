@@ -149,8 +149,17 @@ util = {
 	}
 	isObject : function(o) {
 	    return toString.apply(o) === '[object Object]';
-	}
-
-	
+	},
+	setOpacity : function (obj, val) {  
+        var vals = (typeof obj === "number" && val <= 100 && val >= 0) ? val : 100;  
+        if (!obj) {  
+            return;  
+        }  
+        if (ie) {  
+            obj.style.filter = 'alpha(opacity=' + vals + ')';  
+        } else {  
+            obj.style.opacity = vals / 100;  
+        }  
+    }
 
 };
