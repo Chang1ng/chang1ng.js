@@ -1,4 +1,3 @@
-http://recommend.baidu.com/web_static/express/conf/4001/express_num_reg.conf
 //正整数
 /^[0-9]*[1-9][0-9]*$/;
 //负整数
