@@ -160,6 +160,7 @@ util = {
 		} else {  
 		    obj.style.opacity = vals / 100;  
 		}  
-	}
+	},
+	...
 
 };
